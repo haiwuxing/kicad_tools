@@ -398,7 +398,7 @@ class BOMItem:
            refs += r + ','
         if not out:
             out = csv.writer(sys.stdout, lineterminator='\n', delimiter=',', quotechar='\"', quoting=csv.QUOTE_ALL)
-        out.writerow([self.value, self.desc, refs, self.fp, self.libRef, str(self.pincount), str(len(self.refs)), self.partNumber, self.url ])
+        out.writerow([self.value, self.desc, refs, self.fp, str(len(self.refs)), self.partNumber])
     def AddRef(self, ref):
         self.refs.append(ref)
         self.refs = ref_sorted(self.refs)
@@ -406,7 +406,7 @@ class BOMItem:
 def OutputBOMHeader(out = None):
     if not out:
         out = csv.writer(sys.stdout, lineterminator='\n', delimiter=',', quotechar='\"', quoting=csv.QUOTE_ALL)
-    out.writerow(['Comment','Description','Designator','Footprint','LibRef','Pins','Quantity','PartNumber','url'])
+    out.writerow(['Comment','Description','Designator','Footprint','Quantity','PartNumber'])
 
 def IsModExclude(mod, ExcludeRefs = [], ExcludeValues = []):
     r = mod.GetReference()
