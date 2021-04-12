@@ -12,7 +12,7 @@
 
 * Windows 安装命令
     ```
-    git clone https://github.com/xtoolbox/kicad_tools.git %appdata%/kicad/scripting/plugins/kicad_tools
+    git clone https://github.com/haiwuxing/kicad_tools.git %appdata%/kicad/scripting/plugins/kicad_tools
     ```
 * Linux 安装命令
     ```
