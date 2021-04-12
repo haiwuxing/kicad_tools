@@ -11,6 +11,9 @@ import io
 import loadnet
 import traceback
 
+reload(sys)
+sys.setdefaultencoding("utf8")
+
 import re
 patten = re.compile(r'\d+')
 def ref_comp(x):
